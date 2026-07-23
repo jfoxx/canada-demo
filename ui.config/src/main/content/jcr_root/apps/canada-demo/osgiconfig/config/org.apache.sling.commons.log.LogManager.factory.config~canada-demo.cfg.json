@@ -1,6 +1,6 @@
 {
   "org.apache.sling.commons.log.names": [
-    "com.canada-demo"
+    "com.canadademo"
   ],
   "org.apache.sling.commons.log.level": "INFO",
   "org.apache.sling.commons.log.file": "logs/error.log",

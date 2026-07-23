@@ -1,0 +1,18 @@
+<!--/*
+    Renders the Core Components Breadcrumb model as gcds-breadcrumbs for the header's
+    "breadcrumb" slot. The current (active) page is omitted, matching the design
+    system's own examples which only show the ancestor trail.
+
+    data-sly-list is kept on a wrapping <sly> (rather than combined with data-sly-test on
+    the gcds-breadcrumbs-item itself) so navItem is already bound by the time the per-item
+    test runs - combining list+test on one element evaluates test before list binds the
+    item, which renders every item regardless of the test.
+*/-->
+<gcds-breadcrumbs slot="breadcrumb"
+    data-sly-use.breadcrumb="com.adobe.cq.wcm.core.components.models.Breadcrumb"
+    data-sly-test="${breadcrumb.items.size > 0}">
+    <sly data-sly-list.navItem="${breadcrumb.items}">
+        <gcds-breadcrumbs-item data-sly-test="${!navItem.active}"
+            href="${navItem.link.url}">${navItem.title}</gcds-breadcrumbs-item>
+    </sly>
+</gcds-breadcrumbs>

@@ -13,10 +13,11 @@
             <experiencefragment-header
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="canada-demo/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/canada-demo/ca/en/site/header/master"/>
+                fragmentVariationPath="/content/experience-fragments/canada-demo/us/en/site/header/master"/>
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="canada-demo/components/container"
+                id="wb-cont"
                 layout="responsiveGrid">
                 <title
                     jcr:primaryType="nt:unstructured"
@@ -31,7 +32,7 @@
             <experiencefragment-footer
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="canada-demo/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/canada-demo/ca/en/site/footer/master"/>
+                fragmentVariationPath="/content/experience-fragments/canada-demo/us/en/site/footer/master"/>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">

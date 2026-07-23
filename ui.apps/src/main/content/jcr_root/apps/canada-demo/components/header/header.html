@@ -1,0 +1,14 @@
+<!--/*
+    GC Design System header landmark. Composes the breadcrumb, top navigation and search
+    child resources (authored on this resource) into the gcds-header's named slots, and
+    derives the bilingual lang-href toggle from this resource's own navigationRoot/structureDepth
+    properties via the Core Components LanguageNavigation model.
+*/-->
+<gcds-header
+    data-sly-use.language="com.adobe.cq.wcm.core.components.models.LanguageNavigation"
+    lang-href="${language.items && language.items.size > 1 ? (language.items[0].active ? language.items[1].URL : language.items[0].URL) : ''}"
+    skip-to-href="#wb-cont">
+    <sly data-sly-resource="./breadcrumb"></sly>
+    <sly data-sly-resource="./navigation"></sly>
+    <sly data-sly-resource="./search"></sly>
+</gcds-header>

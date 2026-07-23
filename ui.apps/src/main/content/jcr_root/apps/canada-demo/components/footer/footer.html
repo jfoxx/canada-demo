@@ -1,0 +1,12 @@
+<!--/*
+    GC Design System footer landmark. display/contextualHeading/contextualLinks/subLinks are
+    authored directly on this resource; contextualLinks and subLinks are JSON strings of the
+    form { "Link label": "https://...", ... }, passed straight through to gcds-footer's
+    contextual-links/sub-links attributes.
+*/-->
+<gcds-footer
+    display="${properties.display || 'compact'}"
+    data-sly-attribute.contextual-heading="${properties.contextualHeading}"
+    data-sly-attribute.contextual-links="${properties.contextualLinks}"
+    data-sly-attribute.sub-links="${properties.subLinks}">
+</gcds-footer>

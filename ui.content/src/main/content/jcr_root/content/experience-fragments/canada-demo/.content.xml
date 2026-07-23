@@ -6,5 +6,5 @@
     jcr:primaryType="sling:OrderedFolder"
     jcr:title="Canada Demo Fragments"
     sling:configRef="/conf/canada-demo">
-    <ca/>
+    <us/>
 </jcr:root>

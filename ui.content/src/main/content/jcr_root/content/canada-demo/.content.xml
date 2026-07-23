@@ -4,7 +4,7 @@
     <jcr:content
         cq:allowedTemplates="[/conf/canada-demo/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/canada-demo"
-        cq:redirectTarget="/content/canada-demo/ca/en"
+        cq:redirectTarget="/content/canada-demo/us/en"
         cq:template="/conf/canada-demo/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         jcr:title="Canada Demo"
@@ -16,5 +16,5 @@
             <file/>
         </image>
     </jcr:content>
-    <ca/>
+    <us/>
 </jcr:root>

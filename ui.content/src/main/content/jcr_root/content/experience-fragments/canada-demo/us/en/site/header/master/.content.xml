@@ -11,24 +11,23 @@
         sling:resourceType="canada-demo/components/xfpage">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="canada-demo/components/container"
-            layout="simple">
+            sling:resourceType="canada-demo/components/header"
+            navigationRoot="/content/canada-demo/us"
+            structureDepth="2">
+            <breadcrumb
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="canada-demo/components/breadcrumb"/>
             <navigation
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="canada-demo/components/navigation"
                 collectAllPages="false"
-                navigationRoot="/content/canada-demo/ca/en"
+                navigationRoot="/content/canada-demo/us/en"
                 skipNavigationRoot="false"
                 structureDepth="1"/>
-            <languagenavigation
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="canada-demo/components/languagenavigation"
-                navigationRoot="/content/canada-demo/ca"
-                structureDepth="2"/>
             <search
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="canada-demo/components/search"
-                searchRoot="/content/canada-demo/ca"/>
+                searchRoot="/content/canada-demo/us"/>
         </root>
     </jcr:content>
 </jcr:root>
