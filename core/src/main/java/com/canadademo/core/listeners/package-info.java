@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.canada-demo.core.listeners;
+package com.canadademo.core.listeners;
 
 import org.osgi.annotation.versioning.Version;

@@ -17,4 +17,10 @@
     <sly data-sly-call="${clientlib.css @ categories='canada-demo.base'}"/>
 </sly>
 
+<!--/* GC Design System: loaded as static resources, not via js.txt/css.txt - see
+   ui.frontend/clientlib.config.js and webpack.common.js for why. */-->
+<link rel="stylesheet" href="/etc.clientlibs/canada-demo/clientlibs/clientlib-gcds/resources/gcds/gcds.css"/>
+<link rel="stylesheet" href="/etc.clientlibs/canada-demo/clientlibs/clientlib-gcds/resources/gcds/gcds-css-shortcuts.min.css"/>
+<script type="module" src="/etc.clientlibs/canada-demo/clientlibs/clientlib-gcds/resources/gcds/gcds.esm.js"></script>
+
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>

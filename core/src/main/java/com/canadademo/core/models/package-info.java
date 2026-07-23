@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.canada-demo.core.models;
+package com.canadademo.core.models;
 
 import org.osgi.annotation.versioning.Version;

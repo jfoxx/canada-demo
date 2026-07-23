@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.canada-demo.core.servlets;
+package com.canadademo.core.servlets;
 
 import org.osgi.annotation.versioning.Version;

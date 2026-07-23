@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.canada-demo.core.filters;
+package com.canadademo.core.filters;
 
 import org.osgi.annotation.versioning.Version;
