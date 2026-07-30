@@ -12,7 +12,7 @@
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="canada-demo/components/header"
-            navigationRoot="/content/canada-demo/us"
+            navigationRoot="/content/canada-demo"
             structureDepth="2">
             <breadcrumb
                 jcr:primaryType="nt:unstructured"
@@ -21,13 +21,13 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="canada-demo/components/navigation"
                 collectAllPages="false"
-                navigationRoot="/content/canada-demo/us/en"
+                navigationRoot="/content/canada-demo/en"
                 skipNavigationRoot="false"
                 structureDepth="1"/>
             <search
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="canada-demo/components/search"
-                searchRoot="/content/canada-demo/us"/>
+                searchRoot="/content/canada-demo"/>
         </root>
     </jcr:content>
 </jcr:root>
