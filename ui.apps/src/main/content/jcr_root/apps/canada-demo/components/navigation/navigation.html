@@ -4,14 +4,18 @@
     top-nav's home/brand link; the rest render as plain gcds-nav-link items.
 
     data-sly-list is kept on a wrapping <sly> rather than combined with data-sly-test/
-    data-sly-attribute on the gcds-nav-link itself - see breadcrumb.html for why.
+    data-sly-attribute on the gcds-nav-link itself - see breadcrumb.html for why. The
+    home/not-home distinction uses the list's own navItemList.first directly in the
+    attribute expression rather than a separate data-sly-test.isFirst, since a *named*
+    data-sly-test still hides its host element when falsy (see container.html) - that
+    would have deleted every non-first gcds-nav-link entirely instead of just omitting
+    its slot attribute.
 */-->
 <gcds-top-nav slot="menu" label="${'Main menu' @ i18n}" alignment="right"
     data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation"
     data-sly-test="${navigation.items.size > 0}">
     <sly data-sly-list.navItem="${navigation.items}">
-        <gcds-nav-link data-sly-test.isFirst="${navItemList.first}"
-            data-sly-attribute.slot="${isFirst ? 'home' : false}"
+        <gcds-nav-link data-sly-attribute.slot="${navItemList.first ? 'home' : false}"
             href="${navItem.link.url}">${navItem.title}</gcds-nav-link>
     </sly>
 </gcds-top-nav>

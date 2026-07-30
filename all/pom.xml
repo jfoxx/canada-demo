@@ -95,6 +95,14 @@
                             <target>/apps/canada-demo-vendor-packages/application/install</target>
                         </embedded>
                     </embeddeds>
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-all</artifactId>
+                            <filter>true</filter>
+                            <isAllVersionsFilter>true</isAllVersionsFilter>
+                        </subPackage>
+                    </subPackages>
                 </configuration>
             </plugin>
             <plugin>
@@ -210,6 +218,12 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.config</artifactId>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-all</artifactId>
             <type>zip</type>
         </dependency>
     </dependencies>

@@ -1,0 +1,28 @@
+<!--/*
+    A container instance can opt IN to its own independent contained width via the "Contained
+    width" dialog checkbox (default off) - most nested containers should just inherit whatever
+    width context they're already rendered in (their parent's gcds-container, or the page's
+    edge-to-edge root), so wrapping them in a second layout="page" would compound with the
+    parent's and inset the content further. Only check this for a section that needs to force
+    its own alignment to gcds-header/gcds-footer's 1140px width regardless of context - e.g.
+    the page's main content region (wb-cont), or a contained band inside an edge-to-edge hero.
+
+    Note: data-sly-test.name="..." (a *named* test) still hides its own host element when
+    falsy, same as an unnamed data-sly-test - it doesn't just define a variable. So the test
+    lives directly on the gcds-container branch (which should indeed disappear when not
+    contained), matching the pattern core's own container.html uses for its two layout
+    branches - never on a single parent wrapping both branches, or the whole subtree vanishes
+    whenever the value is false.
+*/-->
+<sly data-sly-use.container="com.adobe.cq.wcm.core.components.models.LayoutContainer"
+     data-sly-use.responsiveGridTemplate="core/wcm/components/container/v1/container/responsiveGrid.html"
+     data-sly-use.simpleTemplate="core/wcm/components/container/v1/container/simple.html">
+    <gcds-container data-sly-test.isContained="${properties.containedWidth == true}" layout="page" tag="${container.id == 'wb-cont' ? 'main' : 'div'}">
+        <sly data-sly-test="${container.layout == 'RESPONSIVE_GRID'}" data-sly-call="${responsiveGridTemplate.responsiveGrid @ container=container}"></sly>
+        <sly data-sly-test="${container.layout != 'RESPONSIVE_GRID'}" data-sly-call="${simpleTemplate.simple @ container=container}"></sly>
+    </gcds-container>
+    <sly data-sly-test="${!isContained}">
+        <sly data-sly-test="${container.layout == 'RESPONSIVE_GRID'}" data-sly-call="${responsiveGridTemplate.responsiveGrid @ container=container}"></sly>
+        <sly data-sly-test="${container.layout != 'RESPONSIVE_GRID'}" data-sly-call="${simpleTemplate.simple @ container=container}"></sly>
+    </sly>
+</sly>
