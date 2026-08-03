@@ -1,1 +1,11 @@
-.cmp-container {}
+.cmp-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    --gcds-heading-spacing-600: 0px;
+
+    &.cmp-container--no-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

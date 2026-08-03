@@ -1,82 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        pageTitle="Canada Demo"
-        jcr:primaryType="cq:PageContent"
-        jcr:title="en"
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2026-08-03T16:40:58.236-04:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/canada-demo/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="en"
         sling:resourceType="canada-demo/components/page"
-    >
+        pageTitle="Canada Demo">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="canada-demo/components/container"
             containedWidth="{Boolean}false"
             layout="responsiveGrid">
             <container
+                jcr:mixinTypes="[mix:lockable]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="canada-demo/components/container">
-                <title
+                sling:resourceType="canada-demo/components/container"
+                containedWidth="{Boolean}false"
+                id="wb-cont"
+                layout="responsiveGrid">
+                <teaser_hero
+                    cq:styleIds="[1785504265708,1785504300104]"
+                    jcr:description="&lt;p>The official website of the Government of Canada&lt;/p>&#xd;&#xa;"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="canada-demo/components/title"/>
+                    jcr:title="Canada.ca"
+                    sling:resourceType="canada-demo/components/teaser"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/canada-demo/asset.jpg"
+                    isDecorative="{Boolean}true"
+                    linkTarget="_self"
+                    textIsRich="true"
+                    titleFromPage="false">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="12"/>
+                    </cq:responsive>
+                </teaser_hero>
                 <container
+                    jcr:mixinTypes="[mix:lockable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="canada-demo/components/container"
+                    containedWidth="{Boolean}false"
                     layout="responsiveGrid">
-                    <teaser
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                    <container_86173448
+                        jcr:created="{Date}2026-08-03T09:47:40.555-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-08-03T16:07:19.881-04:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="canada-demo/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser>
-                    <teaser_copy
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        sling:resourceType="canada-demo/components/container"
+                        containedWidth="false"
+                        noPadding="true">
+                        <teaser
+                            cq:styleIds="[1785504265708,1785504300104]"
+                            jcr:created="{Date}2026-08-03T09:47:45.189-04:00"
+                            jcr:createdBy="admin"
+                            jcr:description="&lt;p>The official website of the Government of Canada&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2026-08-03T10:21:13.281-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Canada.ca"
+                            sling:resourceType="canada-demo/components/teaser"
+                            descriptionFromPage="false"
+                            fileName="home-banner-summer-2026-1-1920x315.jpg"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <file/>
+                        </teaser>
+                    </container_86173448>
+                    <container_1537809
+                        jcr:created="{Date}2026-08-03T14:50:44.690-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-08-03T15:51:36.537-04:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="canada-demo/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser_copy>
-                    <teaser_copy_1579324932
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        sling:resourceType="canada-demo/components/container"
+                        backgroundColor="#F5f5f5"
+                        containedWidth="true">
+                        <title
+                            jcr:created="{Date}2026-08-03T14:58:59.628-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2026-08-03T14:59:08.710-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Most requested"
+                            sling:resourceType="canada-demo/components/title"
+                            linkTarget="_self"
+                            type="h2"/>
+                        <text
+                            cq:styleIds="[1785788879162,1785786846137]"
+                            jcr:created="{Date}2026-08-03T15:50:54.641-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2026-08-03T15:51:17.956-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="canada-demo/components/text"
+                            text="&lt;ul>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/government/sign-in-online-account.html&quot;>Sign in to an account&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/benefits/ei.html&quot;>Employment Insurance and leave&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/benefits/publicpensions.html&quot;>Public pensions (CPP and OAS)&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports.html&quot;>Get a passport&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html&quot;>Visit Canada&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/benefits/disability/canada-disability-benefit.html&quot;>Disability Benefit&lt;/a>&lt;/li>&#xd;&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html&quot;>Canadian Dental Care Plan&lt;/a>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </container_1537809>
+                    <container_1752448259
+                        jcr:created="{Date}2026-08-03T15:52:25.932-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-08-03T15:52:51.602-04:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="canada-demo/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser_copy_1579324932>
-                    <helloworld
+                        sling:resourceType="canada-demo/components/container"
+                        containedWidth="true">
+                        <text
+                            cq:styleIds="[1785786878544,1785788879162]"
+                            jcr:created="{Date}2026-08-03T15:52:36.126-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2026-08-03T15:53:50.386-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="canada-demo/components/text"
+                            text="&lt;ul>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/jobs.html&quot;>Jobs&lt;/a>&amp;nbsp;Find a job, training, hiring programs, work permits, Social Insurance Number (SIN)&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/immigration-citizenship.html&quot;>Immigration and citizenship&lt;/a>&amp;nbsp;Visit, work, study, immigrate, refugees, permanent residents, apply, check status&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://travel.gc.ca/&quot;>Travel and tourism&lt;/a>&amp;nbsp;In Canada or abroad, advice, advisories, passports, visit Canada, events, attractions&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/business.html&quot;>Business and industry&lt;/a>&amp;nbsp;Starting a business, permits, copyright, business support, selling to government&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/benefits.html&quot;>Benefits&lt;/a>&amp;nbsp;EI, family and sickness leave, pensions, housing, student aid, disabilities&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/taxes.html&quot;>Taxes&lt;/a>&amp;nbsp;Income tax, payroll, GST/HST, contribution limits, tax credits, charities&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/health.html&quot;>Health&lt;/a>&amp;nbsp;Food, nutrition, diseases, vaccines, drugs, product safety and recalls&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/environment.html&quot;>Environment and natural resources&lt;/a>&amp;nbsp;Weather, climate, agriculture, wildlife, pollution, conservation, fisheries&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/services/finance.html&quot;>Money and finances&lt;/a>&amp;nbsp;Personal finance, credit reports, fraud protection, paying for education&lt;/li>&#xa;&lt;/ul>&#xa;"
+                            textIsRich="true"/>
+                    </container_1752448259>
+                    <container_1537809_co
+                        jcr:created="{Date}2026-08-03T14:50:44.690-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-08-03T15:51:36.537-04:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="canada-demo/components/helloworld"
-                        text="lalala :)"/>
+                        sling:resourceType="canada-demo/components/container"
+                        backgroundColor="#F5f5f5"
+                        containedWidth="true">
+                        <title
+                            jcr:created="{Date}2026-08-03T14:58:59.628-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2026-08-03T16:39:37.560-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Your government"
+                            sling:resourceType="canada-demo/components/title"
+                            linkTarget="_self"
+                            type="h2">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="2"
+                                    width="5"/>
+                            </cq:responsive>
+                        </title>
+                        <text
+                            cq:styleIds="[1785788879162,1785786846137]"
+                            jcr:created="{Date}2026-08-03T15:50:54.641-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2026-08-03T16:40:38.114-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="canada-demo/components/text"
+                            text="&lt;ul>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/contact.html&quot;>All contacts&lt;/a>&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/news.html&quot;>News&lt;/a>&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://pm.gc.ca/en&quot;>Prime Minister&lt;/a>&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/government/dept.html&quot;>Departments and agencies&lt;/a>&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/government/system.html&quot;>About government&lt;/a>&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://open.canada.ca/en&quot;>Open government and data&lt;/a>&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/government/publicservice.html&quot;>Working for the government&lt;/a>&lt;/li>&#xa;&lt;li>&lt;a href=&quot;https://www.canada.ca/en/government/system/laws.html&quot;>Treaties, laws and regulations&lt;/a>&lt;/li>&#xa;&lt;/ul>&#xa;"
+                            textIsRich="true">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="2"
+                                    width="5"/>
+                            </cq:responsive>
+                        </text>
+                    </container_1537809_co>
                 </container>
             </container>
         </root>

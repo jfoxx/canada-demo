@@ -1,0 +1,28 @@
+<!--/*
+    Copied from core/wcm/components/container/v1/container/simple.html so the "Contained
+    width" wrapper can go around just the children, not the id/class/background div - see
+    container.html for why.
+*/-->
+<template data-sly-template.simple="${ @ container}">
+    <sly data-sly-test="${wcmmode.edit}" data-sly-use.allowed="com.day.cq.wcm.foundation.AllowedComponentList"></sly>
+    <div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+         data-sly-element="${container.id == 'wb-cont' ? 'main' : 'div'}"
+         id="${container.id}"
+         class="cmp-container${wcmmode.edit ? ' {0}': '' @ format=[allowed.cssClass]}${properties.noPadding ? ' cmp-container--no-padding' : ''}"
+         aria-label="${container.accessibilityLabel}"
+         role="${container.roleAttribute}"
+         style="${container.backgroundStyle @ context='styleString'}">
+        <sly data-sly-test.isAllowedApplicable="${allowed.isApplicable}"
+             data-sly-use.allowedTemplate="core/wcm/components/container/v1/container/allowedcomponents.html"
+             data-sly-call="${allowedTemplate.allowedcomponents @ title=allowed.title, components=allowed.components}"></sly>
+        <gcds-container data-sly-test="${!isAllowedApplicable && properties.containedWidth}" layout="page">
+            <sly data-sly-set.items="${container.children || container.items}"
+                 data-sly-repeat="${items}" data-sly-resource="${item.resource || item.path @ decoration=true}"></sly>
+        </gcds-container>
+        <sly data-sly-test="${!isAllowedApplicable && !properties.containedWidth}"
+             data-sly-set.items="${container.children || container.items}"
+             data-sly-repeat="${items}" data-sly-resource="${item.resource || item.path @ decoration=true}"></sly>
+        <sly data-sly-test="${!isAllowedApplicable && !wcmmode.disabled}"
+             data-sly-resource="${resource.path @ resourceType='core/wcm/components/container/v1/container/new', appendPath='/*', decorationTagName='div', cssClassName='new section'}" />
+    </div>
+</template>

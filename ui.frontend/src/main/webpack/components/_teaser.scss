@@ -7,3 +7,95 @@
 .cmp-teaser__description {}
 .cmp-teaser__action-container {}
 .cmp-teaser__action-link {}
+
+// Breaks the teaser out of its parent's contained width (e.g. gcds-container
+// layout="page") so its background image spans the full browser width, like
+// the hero banner on canada.ca's homepage.
+.cmp-teaser__full-width {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+}
+
+// When full-width is used on its own (no text overlay), the image renders in normal
+// flow at a fixed height. When style-boxed is also present, the rules below take over
+// image sizing instead (absolutely positioned behind the content).
+.cmp-teaser__full-width:not(.cmp-teaser__style-boxed) {
+    .cmp-teaser__image {
+        height: 420px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}
+
+// Overlays the title/description in a dark blue box on top of the image, matching
+// canada.ca's homepage hero styling. The image is positioned absolutely *behind* the
+// content instead of the other way around, so the content box can be laid out with
+// ordinary margin/flexbox instead of fighting position:absolute for its own placement.
+.cmp-teaser__style-boxed {
+    overflow: hidden;
+    .cmp-teaser__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 420px;
+    }
+
+    .cmp-teaser__image {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+
+        >div.cmp-image {
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .cmp-teaser__content {
+        position: relative;
+        z-index: 1;
+        max-width: 500px;
+        margin-left: max(24px, calc(50% - 570px));
+        padding: 24px 32px;
+        background-color: var(--gcds-color-blue-muted, rgba(38, 55, 74, 0.76));
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .cmp-teaser__title {
+        margin: 0 0 12px;
+        padding-bottom: 8px;
+        display: inline-block;
+        border-bottom: 4px solid var(--gcds-color-red-500, #df2039);
+    }
+
+    .cmp-teaser__title-link,
+    .cmp-teaser__title {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .cmp-teaser__description {
+        display: inline-block;
+        margin: 0;
+        padding: 2px 6px;
+        color: #fff;
+
+        p {
+            margin: 0;
+        }
+    }
+}

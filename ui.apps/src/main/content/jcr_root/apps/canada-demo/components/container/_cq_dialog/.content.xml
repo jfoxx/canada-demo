@@ -69,6 +69,15 @@
                                                 value="{Boolean}true"
                                                 uncheckedValue="{Boolean}false"
                                                 checked="{Boolean}false"/>
+                                            <noPadding
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Every container gets 50px of top/bottom padding by default. Check this to remove it for this section."
+                                                text="Remove top/bottom padding"
+                                                name="./noPadding"
+                                                value="{Boolean}true"
+                                                uncheckedValue="{Boolean}false"
+                                                checked="{Boolean}false"/>
                                             <backgroundColor
                                                 granite:hide="${!cqDesign.backgroundColorEnabled || cqDesign.backgroundColorSwatchesOnly}"
                                                 jcr:primaryType="nt:unstructured"

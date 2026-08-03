@@ -2,5 +2,13 @@
 //== Container main content style, used on page template
 
 main.container {
-    padding: .5em 1em;
+    padding: 0;
+}
+
+main.cmp-container {
+    padding: 0;
+
+    >.aem-Grid >.container>.cmp-container {
+        padding: 0;
+    }
 }

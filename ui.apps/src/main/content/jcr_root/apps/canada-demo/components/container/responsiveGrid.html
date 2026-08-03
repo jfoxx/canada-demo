@@ -1,0 +1,21 @@
+<!--/*
+    Copied from core/wcm/components/container/v1/container/responsiveGrid.html so the
+    "Contained width" wrapper can go around just the children, not the id/class/background
+    div - see container.html for why. wb-cont also gets rendered as a <main> landmark here,
+    since that tag choice is independent of contained width too (it was previously coupled to
+    the gcds-container wrapper and so never fired once wb-cont's own containedWidth was
+    fixed to always be false).
+*/-->
+<template data-sly-template.responsiveGrid="${ @ container}">
+    <div data-sly-element="${container.id == 'wb-cont' ? 'main' : 'div'}"
+         id="${container.id}"
+         class="cmp-container${properties.noPadding ? ' cmp-container--no-padding' : ''}"
+         aria-label="${container.accessibilityLabel}"
+         role="${container.roleAttribute}"
+         style="${container.backgroundStyle @ context='styleString'}">
+        <gcds-container data-sly-test="${properties.containedWidth}" layout="page">
+            <sly data-sly-resource="${resource @ resourceType='wcm/foundation/components/responsivegrid'}"></sly>
+        </gcds-container>
+        <sly data-sly-test="${!properties.containedWidth}" data-sly-resource="${resource @ resourceType='wcm/foundation/components/responsivegrid'}"></sly>
+    </div>
+</template>

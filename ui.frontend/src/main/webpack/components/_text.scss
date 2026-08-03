@@ -1,2 +1,51 @@
-.cmp-text {}
+.cmp-text {
+
+    &__layout {
+        &-col-2 {
+           ul {
+                columns: 2;
+                column-gap: 3rem;
+                
+                li {
+                    break-inside: avoid;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        &-col-3 {
+            ul {
+                columns: 3;
+                column-gap: 3rem;
+                li {
+                    break-inside: avoid;
+                    margin-bottom: 2rem;            
+                }
+            }
+        }
+        &-col-4 {
+            ul {
+                columns: 4;
+                column-gap: 3rem;
+                li {
+                    break-inside: avoid;
+                }
+            }
+        }
+
+    }
+
+
+    &__type {
+
+        &--linklist {
+
+            a {
+                display: block;
+                font-weight: 600;
+                font-size: 1.2rem;
+                white-space: nowrap;
+            }
+        }
+    }
+}
 .cmp-text__paragraph {}
